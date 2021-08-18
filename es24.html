@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <had>
+        <meta charset="utf-8">
+        <script src="js/es24.js"> </script>
+    </had>
+    <body>
+        <div>
+            <div>
+                <h2> Exercicio 24 </h2>
+            </div>
+            <div>
+                <label for="preco"> Preço </label>
+                <input type="number" id="preco">
+            </div>
+            <div>
+                <label for="categoria"> Categoria </label>
+                <select id="categoria">
+                    <option value="1"> Limpeza </option>
+                    <option value="2"> Alimentação </option>
+                    <option value="3"> Vestuário </option>
+                </select>
+            </div>
+            <div>
+                <label> Precissa de refrigeração </label>
+                <input type="radio" name="situacao" id="R" checked > Sim
+                <input type="radio" name="situacao" id="N"> Não     
+            </div>
+            <div>
+                <button type="submit" onClick="calcular()"> Calcular </button>
+            </div>
+            <div>
+                Resultados:<br/>
+                    Aumento: <h3 id="aumento"> </h3>
+                    Imposto: <h3 id="imposto"> </h3>
+                    Novo Preço: <h3 id="novo"> </h3>
+                    Classificação: <h3 id="classificacao"> </h3>
+            </div>
+        </div>
+    </body>
+</html>

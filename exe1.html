@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title> Exercicio 1 da lista </title>
+    </head>
+    <style>
+     #formulario {
+        border-radius: 12px;
+        margin: 20px auto;
+        background-color: #c4c4c4;
+        width: 500px;
+        padding: 10px;
+    
+    }
+     .campos {
+        padding: 15px;
+    }   
+      h2 {
+       color: blue; 
+    }
+    </style>
+    <script>
+        function mp(){
+    //entrada de dados
+   //let nome-variavel
+  //converter texto para número = funcao Number ()
+  let Numero1 = Number(document.getElementById("Numero1").value)
+  let Numero2 = Number(document.getElementById("Numero2").value)
+
+  //processamento
+  let subtração = (Numero1 - Numero2)
+
+  //saida na pagina
+   alert(`O valor da subtração é = ${subtração.toFixed(2)}`)
+
+
+}
+    </script>
+        <body>
+            <div id="formulario">
+                <h2> Exercicio 4 da lista </h2>
+                <div class="campos"></div>
+                <div>
+                    <label for="KM"> Quantos km o carro percorreu </label>
+                    <input type="number" id="KM"/> <!--vamos usar nota 1 no js-->
+                </div>
+                <div class="campos"></div>
+                <div>
+                    <label for="KM/L"> Quantos km/l faz o carro </label>
+                    <input type="number" id="KM/L"/> <!--vamos usar nota 2 no js-->
+                </div>
+                <div class="campos"></div>
+                <div>
+                    <label for="VC"> Valor do combustivel </label>
+                    <input type="number" id="VC"/>
+                </div>  
+                <div>
+                    <button type="button" onClick="mp()"> Calcular </button>
+                </div>
+               
+            </div>
+        </body>
+
+</html>

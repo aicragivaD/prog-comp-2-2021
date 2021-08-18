@@ -1,0 +1,10 @@
+ /* CSS */
+ #formulário {
+    outline: blue 2px solid; /* borda externa azul de 2pxde espessura */
+    padding: 30px; /* espaçamento interno de 30 pixels (bolinha) */
+    width: 550px; /* largura do formulário */
+    margin: 40px auto; /* espaçamento externo de 40 pixels centralizado */
+}
+#peso, #altura, #botão, #divPedagio1, #divPedagio2, #combustivel, #botao{
+    margin: 10px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+    <title> Exemplo 2</title>
+    <meta charset="utf-8"/> <!-- sistema de codificação aceita ç á à ã -->
+        <!-- meta é auto-explicação falar de si mesmo -->
+    <style>
+           
+            .galeria {
+                margin: 5px; /* espaçamento externo de 5px */
+                border: 1px solid #ccc; /* borda sólida com cor */
+                float: left; /* flutuaçao ou alinhamento a esquerda */
+                width: 180px; /*largura de 180 px */
+
+            }
+            img {
+                width: 100%; /* cobrem 100% da largura da div da galeria */
+                height: auto; /* altura da imagem é a altura dela */
+
+            }
+            #conteudo {
+                width: 800px; /* largura das galerias*/
+                margin: 60px auto; /* centralizando a area e tambem criando espaçamento externo de 60px */
+            }
+            .descricao {
+                padding: 15px; /* espaçamento interno */
+                text-align: center; /* alinhamento do texto */
+            }
+    </style>
+     <link rel="stylesheet" href="css/imc.css">
+     <link rel="stylesheet" href="css/menu.css">
+    <script>
+        
+        
+        function Viagem(){
+            //entrada de dados
+            //number() -> converte texto em numero
+            let pedagio1 = Number(document.getElementById("pedagio1").value)
+            let pedagio2 = Number(document.getElementById("pedagio2").value)
+            let combustivel = Number(document.getElementById("combustivel").value)
+            // processamento
+            let custo = pedagio1 + pedagio2 + combustivel
+            alert(`O custo total da viagem é de ${custo}`)
+        }
+        
+        </script>
+   </head>
+    <body>
+        <nav id="menu"> <!-- menu da navegação -->
+            <ul> <!-- unorded list ou lista não ordenada -->
+                <li> <a href="home.html"> Home  </a> </li> <!-- list item ou item de lista -->
+                <li> <a href="imc.html"> Calculadora do IMC  </a> </li>
+                <li> <a href="viagem.html"> Custo de viagem  </a> </li>
+                <li> <a href="sobre.html"> Sobre  </a> </li>
+                <li> <a href="galeria.html"> Galeria de imagens </a> </li>
+                <li> <a href="videos.html"> Videos do Youtube </a> </li>
+                <li> <a href="tabela.html"> Tabela nutricional </a> </li>
+                <li>
+                    <div class="menu-suspenso">
+                       <a href="imc.html"> Calculadora do IMC  </a>
+                       <div class="conteudo-menu-suspenso">
+                           <a href="imc-homem.html"> Homem </a>
+                           <a href="imc-mulher.html"> Mulher </a>
+                       </div>
+                    </div>         
+                </li>
+
+
+            </ul>
+        </nav>
+        <div id="conteudo">
+            <div class="galeria">
+            <!-- src é o local e o nome da imagem -->
+            <!-- widht é a largura da imagem em pixel -->
+            <!-- height é a altura da imagem em pixel -->
+            <a target="_blank" href="./img/corrida.jpg">
+            <img src="./img/corrida.jpg" width="600" height="400"/>
+        </a>
+        <div class="descriçao"> Corrida para melhorar cardiorespiraçao </div>
+            
+            </div>
+            <div class="galeria">
+                <a target="_blank" href="./img/dieta.jpg">
+                <img src="img/dieta.jpg" width="600" height="400"/>
+                </a>
+                <div class="descrição"> Dieta para diminuir o colesterol </div>
+
+            </div>
+            <div class="galeria">
+                <a target="_blank" href="./img/lazer.jpg">
+                <img src="img/lazer.jpg" widht="600" height="400"/>
+                </a>
+                <div class="descrição"> Lazer para melhorar aspectos mentais </div>
+
+            </div>
+            <div class="galeria">
+                <a target="_blank" href="./img/natacao.png">
+                <img src="img/natacao.png" widht="600" height="400"/>
+                </a>
+                <div class="descrição"> Natação para sincronização e respiração </div>
+
+            </div>
+    </body>
+</html>
+
+

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+    <title> Exemplo 2</title>
+    <meta charset="utf-8"/> <!-- sistema de codificação aceita ç á à ã -->
+        <!-- meta é auto-explicação falar de si mesmo -->
+    <style>
+            /* CSS */
+            #caixa {
+                    background-color: lightblue; /* cor de fundo */
+                    width: 300px; /* largura da caixa*/
+                    border: 15px solid green; /* borda verde de caixa */
+                    padding: 50px; /* espaçamento interno da caixa */
+                    margin: 50px auto; /* espaçamento externo da caixa */
+               
+            }
+            #peso, #altura, #botão, #divPedagio1, #divPedagio2, #combustivel, #botao{
+                margin: 10px;
+            }
+            /* regra se aplica apenas ao elemento ul dentro do menu */
+            #menu ul{
+                padding: 10px; /* espaçamento interno de 0px da lista */
+                width: 1200px; /* largura da lista do menu */
+                margin: 10px auto; /* espaçamento externo (parte de fora) de opx da lista */
+                background-color:green; /* cor de fundo da lista */
+                list-style: none; /* lista não terá bolinhas - os items */
+            }
+            /* regra se aplica aos itens da lista do menu */
+            #menu ul li {
+                display: inline; /* os itens da lista ficarão em uma única linha */
+                padding: 20px; /* espaçamento interno entre os itens */
+            }
+            /* a regra se aplica ao link dos itens da lista de menu */
+            #menu ul li a {
+                background-color: blue; /* cor de fundo */
+                color: white; /* cor do texto */
+                text-decoration: none; /* sem sublinhado*/
+                border-bottom: 3px solid #EDEDED; /* borda em baixo com sistema de cores X */
+            }
+            #conteudo {
+                margin: 50px auto;
+                width: 800px;
+            }
+            #tabela {
+                font-family: Arial, Helvetica, sans-serif; /* tipo da fonte */
+                width: 100%; /* ocupa 100% dos 800px */
+                border-collapse: collapse; /* retirar os espaços das células */
+            }
+            td, th {
+                border: 1px solid #ddd;
+                padding: 10px; /* espaçamento interno */
+            }
+            th {
+                background-color: green; /* cabeçalho com fundo verde */
+                color: white; /* cabeçalho com texto branco */
+            }
+            tr:hover { /* quando passar o mouse em cima da linha */   
+                background-color: yellow;
+            }
+            .menu-suspenso {
+                position: relative; /* o conteudo atual acompanha o conteudo da pagina */
+                display: inline-block; /* mostra conteudo em uma unica linha */
+
+            }
+            .conteudo-menu-suspenso {
+                display: none;
+                position: absolute; /* conteudo atual nao acompanha o da pagina */
+                background-color: cyan;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
+            }
+            .menu-suspenso:hover .conteudo-menu-suspenso {
+                display: block;
+            }
+            .conteudo-menu-suspenso a {
+                display: block; /* faz aparecer um em baixo do outro */
+                padding: 4px;
+                text-decoration: none;
+            }
+    </style>
+    <script>
+        
+        
+        function Viagem(){
+            //entrada de dados
+            //number() -> converte texto em numero
+            let pedagio1 = Number(document.getElementById("pedagio1").value)
+            let pedagio2 = Number(document.getElementById("pedagio2").value)
+            let combustivel = Number(document.getElementById("combustivel").value)
+            // processamento
+            let custo = pedagio1 + pedagio2 + combustivel
+            alert(`O custo total da viagem é de ${custo}`)
+        }
+        
+        </script>
+   </head>
+    <body>
+        <nav id="menu"> <!-- menu da navegação -->
+            <ul> <!-- unorded list ou lista não ordenada -->
+                <li> <a href="home.html"> Home  </a> </li> <!-- list item ou item de lista -->
+                <li>  <a href="imc.html"> Calculadora do IMC  </a> </li>
+                <li> <a href="viagem.html"> Custo de viagem  </a> </li>
+                <li> <a href="sobre.html"> Sobre  </a> </li>
+                <li> <a href="galeria.html"> Galeria de imagens </a> </li>
+                <li> <a href="videos.html"> Videos do Youtube </a> </li>
+                <li> <a href="tabela.html"> Tabela nutricional </a> </li>
+                <li>
+                    <div class="menu-suspenso">
+                       <a href="imc.html"> Calculadora do IMC  </a>
+                       <div class="conteudo-menu-suspenso">
+                           <a href="imc-homem.html"> Homem </a>
+                           <a href="imc-mulher.html"> Mulher </a>
+                       </div>
+                    </div>         
+                </li>
+            </ul>
+        </nav>
+        <div id="conteudo">
+            <table id="tabela"> <!-- criamos uma tabela -->
+                <tr> <!-- cria uma linha -->
+                    <th> <!-- cabeçalho -->   Nome do jogo </th>
+                    <th>
+                        Site do jogo </th>
+                    <th>
+                        Tipo do jogo  </th>
+                </tr>
+                <tr>
+                    <td>  GTA </td>
+                    <td> <a href="https://www.epicgames.com/store/pt-BR/p/grand-theft-auto-v">     
+                        https://www.epicgames.com/store/pt-BR/p/grand-theft-auto-v  
+                           </a> </td>
+                    <td>  Jogo Maldoso </td>
+                </tr>
+                    <tr>
+                        <td> Fortinite </td>
+                        <td> <a href=" https://www.epicgames.com/fortnite/pt-BR/home">
+                            https://www.epicgames.com/fortnite/pt-BR/home
+                             </a>> </td>
+                        <td> Jogo em primeira pessoa </td>
+                    </tr>
+                        <td> Rocket League </td>
+                        <td> <a href=" https://www.rocketleague.com/pt-br/">
+                            https://www.rocketleague.com/pt-br/
+                        </a> </td>
+                        <td>  Esporte  </td>
+                    </tr>
+
+            </table> 
+
+           
+                
+               
+                     
+       </div>
+    </body>
+</html>
+
+

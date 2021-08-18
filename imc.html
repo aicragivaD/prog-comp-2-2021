@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+    <title> Exemplo 2</title>
+    <meta charset="utf-8"/> <!-- sistema de codificação aceita ç á à ã -->
+        <!-- meta é auto-explicação falar de si mesmo -->
+     <link rel="stylesheet" href="css/imc.css">
+     <link rel="stylesheet" href="css/menu.css">
+    <script type="text/javascript" src="js/imc.js"> </script> 
+        </head>
+        <body</body>
+        <nav id="menu"> <!-- menu da navegação -->
+            <ul> <!-- unorded list ou lista não ordenada -->
+                <li> <a href="home.html"> Home </a> </li> <!-- list item ou item de lista -->
+                <li> <a href="imc.html"> Calculadora do IMC </a> </li>
+                <li> <a href="viagem.html"> Custo de viagem  </a> </li>
+                <li> <a href="sobre.html" > Sobre </a> </li>
+                <li> <a href="galeria.html"> Galeria de imagens </a> </li>
+                <li> <a href="videos.html"> Videos do Youtube </a> </li>
+                <li> <a href="tabela.html"> Tabela nutricional </a> </li>
+                <li>
+                    <div class="menu-suspenso">
+                       <a href="imc.html"> Calculadora do IMC  </a>
+                       <div class="conteudo-menu-suspenso">
+                           <a href="imc-homem.html"> Homem </a>
+                           <a href="imc-mulher.html"> Mulher </a>
+                       </div>
+                    </div>         
+                </li>
+            </ul>
+        </nav>
+
+        <div id="formulário">
+            <h2> Calculadora de IMC - Índice de Massa Corpórea </h2>
+            <div id="divPeso"> <!-- container -->
+                <label> Peso </label> <!-- rótulo -->
+                <input type="number" id="peso"/>
+            </div>
+            <div id="alturaform">
+                <label> Altura </label>
+                <input type="number" id="altura"/>
+            </div>
+            <div id="botao">
+                <button onClick="organizar()" type="button"> Calcula</button>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+ 
+        </div>
+    </body>
+</html>
+
+

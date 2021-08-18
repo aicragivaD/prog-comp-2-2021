@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+    <title> Exemplo 2</title>
+    <meta charset="utf-8"/> <!-- sistema de codificação aceita ç á à ã -->
+        <!-- meta é auto-explicação falar de si mesmo -->
+    <style>
+            /* CSS */
+            #caixa {
+                    background-color: lightblue; /* cor de fundo */
+                    width: 300px; /* largura da caixa*/
+                    border: 15px solid green; /* borda verde de caixa */
+                    padding: 50px; /* espaçamento interno da caixa */
+                    margin: 50px auto; /* espaçamento externo da caixa */
+               
+            }
+            #peso, #altura, #botão, #divPedagio1, #divPedagio2, #combustivel, #botao{
+                margin: 10px;
+            }
+            
+    </style>
+     <link rel="stylesheet" href="css/imc.css">
+     <link rel="stylesheet" href="css/menu.css">
+    <script>
+        
+        
+        function Viagem(){
+            //entrada de dados
+            //number() -> converte texto em numero
+            let pedagio1 = Number(document.getElementById("pedagio1").value)
+            let pedagio2 = Number(document.getElementById("pedagio2").value)
+            let combustivel = Number(document.getElementById("combustivel").value)
+            // processamento
+            let custo = pedagio1 + pedagio2 + combustivel
+            alert(`O custo total da viagem é de ${custo}`)
+        }
+        
+        </script>
+   </head>
+    <body>
+        <nav id="menu"> <!-- menu da navegação -->
+            <ul> <!-- unorded list ou lista não ordenada -->
+                <li> <a href="home.html"> Home  </a> </li> <!-- list item ou item de lista -->
+                <li> <a href="imc.html"> Calculadora do IMC  </a> </li>
+                <li> <a href="viagem.html"> Custo de viagem  </a> </li>
+                <li> <a href="sobre.html"> Sobre  </a> </li>
+                <li> <a href="galeria.html"> Galeria de imagens </a> </li>
+                <li> <a href="videos.html"> Videos do Youtube </a> </li>
+                <li> <a href="tabela.html"> Tabela nutricional </a> </li>
+                <li>
+                    <div class="menu-suspenso">
+                       <a href="imc.html"> Calculadora do IMC  </a>
+                       <div class="conteudo-menu-suspenso">
+                           <a href="imc-homem.html"> Homem </a>
+                           <a href="imc-mulher.html"> Mulher </a>
+                       </div>
+                    </div>         
+                </li>
+            </ul>
+        </nav>
+        <div id="caixa">
+            Olá, ben-vindo! Eu, DAVI CHAGAS GARCIA criei este site na intenção de ajudalos a calcular o seu IMC
+            e seu Custo de Viagem, espero que gostem :).
+            Sou da area de Sistemas de Informação, no qual criei este site através da matéria de programação de computadores.
+
+       
+       
+ 
+        </div>
+    </body>
+</html>
+
+

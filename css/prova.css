@@ -1,0 +1,14 @@
+#formulario {
+    border-radius: 12px;
+    margin: 20px auto;
+    background-color: #c4c4c4;
+    width: 500px;
+    padding: 10px;
+
+}
+ .campos {
+    padding: 15px;
+}   
+  h2 {
+   color: blue; 
+}
