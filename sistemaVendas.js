@@ -96,7 +96,7 @@ let sistemaVendas = () => {
             case 6: let vetMeses = [0,0,0,0,0,0,0,0,0,0,0,0]
                     for(i=0; i<vetVendas[i].length; i++){
                         let aux = vetVendas[i].mes
-                        vetMeses[aux-1] = vetMeses[aux-1] + vetVendas[i]
+                        vetMeses[aux-1] = vetMeses[aux-1] + vetVendas[i].valor
                     }
                     console.log(vetMeses)
                     break
