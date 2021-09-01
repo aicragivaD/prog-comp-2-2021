@@ -83,7 +83,7 @@ let sistemaVendas = () => {
             case 5: let mes5 = Number(prompt(`Informe o mês de interesse`))
                     let maiorValor = 0
                     let vendedorMaisVendeu = 0
-                    for(i=0; i<vetVendas.length; i++){
+                    for(i=0; i<vetVendas[i].length; i++){
                         if(vetVendas[i].mes == mes5){
                             if(vetVendas[i].valor > maiorValor){
                                 maiorValor = vetVendas[i].valor //atualiza o maior valor
@@ -94,9 +94,10 @@ let sistemaVendas = () => {
                     console.log(`Vendedor que mais vendeu ${vendedorMaisVendeu} com ${maiorValor}`)
                     break
             case 6: let vetMeses = [0,0,0,0,0,0,0,0,0,0,0,0]
-                    for(i=0; i<vetVendas[i].length; i++){
-                        let aux = vetVendas[i].mes
-                        vetMeses[aux-1] = vetMeses[aux-1] + vetVendas[i].valor
+                    // percorre o vetor de vendas
+                    for(let i=0;i<vetVendas.length;i++){
+                    let aux = vetVendas[i].mes // mês da venda
+                    vetMeses[aux-1] = vetMeses[aux-1] + vetVendas[i].valor
                     }
                     console.log(vetMeses)
                     break
