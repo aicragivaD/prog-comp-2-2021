@@ -4,7 +4,7 @@ let sistemaVendas = () => {
     let vetVendedores = []
     let vetVendas = []
     do {
-        opcao = Number(prompt(`Informe: \n1. Cadastrar vendedor \n2. Cadastrar venda \n3. Sair`))
+        opcao = Number(prompt(`Informe: \n1. Cadastrar vendedor \n2. Cadastrar venda \n3. Procura venda \n4. Sair`))
         switch(opcao){
             case 1: let objeto = {
                         codigo: Number(prompt(`Informe código`)),
@@ -56,16 +56,17 @@ let sistemaVendas = () => {
                     for(let i=0;i<vetVendas.length;i++){
                         if ((vetVendas[i].codigo == codigo) && (vetVendas[i].mes == mes)){
                             console.log(`O valor da venda do funcionário ${codigo} no mês ${mes} foi ${vetVendas[i].valor}`)
-                            achou = true
+                            achou3 = true
                         }
                     }
                     if (!achou3){
                         console.log(`Venda não encontrada para este funcionário neste mês`)
                     }
-            alert(`O programa será encerrado`)
+                    break
+            case 4: alert(`O programa será encerrado`)
                     break
             default: alert(`Opção inválida`)
         }
     }
-    while (opcao != 3)
+    while (opcao != 4)
 }
