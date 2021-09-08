@@ -7,9 +7,9 @@ function principal(){
         opcao = Number(prompt(`Digite: \n1. F1 \n2. F2 \n3. F3 \n4. Sair`))
         switch(opcao){
             case 1: idade = Number(prompt(`Informe a sua idade`))
-                   f1(idade)
+                   idade = f1(idade)
                    break
-            case 2: idade = Number(prompt(`Informe a sua idade`))
+            case 2: 
                     peso = Number(prompt(`Informe seu peso`))
                     f2(idade, peso)
                     break
@@ -26,16 +26,20 @@ function principal(){
     while (opcao!= 4)
 }
 
-
+//funcao que recebe parametro
 function f1(idade){
     //let idade = 10
     alert(`Valor de idade ${idade}`)
+    idade = idade + 10
+    return idade //retorna o resultado da funcao
 
 }
+//funcao que recebe parametro
 function f2(idade, peso){
     alert(`Valor de idade ${idade} e do peso ${peso}`)
 
 }
+//funcao que recebe parametro
 function f3(idade, peso, altura){
     alert(`Valor de idade ${idade}, peso ${peso} e altura ${altura}`)
 
