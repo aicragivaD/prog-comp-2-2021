@@ -22,14 +22,16 @@ let sistemaImobiliaria = () => {
 }
 
 
-let cadastraImovel = (vetImoveis) => {
+let cadastraImovel = (vetImoveis) => { //cadastro do imovel
     let objeto = {
         codigo: Number(prompt(`Informe codigo do imóvel`)),
         tamanho: Number(prompt(`Informe tamanho do imóvel`)),
         tipo: prompt(`Informe tipo do imóvel. A p/ Apartamento e C p/ Casa`).toUpperCase(),
         valor: Number(prompt(`Informe valor do imóvel`)),
     }
+    // verifica se já tem outro vendedor com o mesmo código
     let achou = false
+    // vetVendedores.length retorna o tamanho do vetor
     for(let i=0; i<vetImoveis.length; i++){
         if (vetImoveis[i].codigo == objeto.codigo){
             achou = true
@@ -37,6 +39,7 @@ let cadastraImovel = (vetImoveis) => {
         }
     }
     if (!achou){
+        // adiciona objeto no vetor
         vetImoveis.push(objeto)
         alert(`Imóvel cadastrado com sucesso`)
     }
@@ -44,7 +47,7 @@ let cadastraImovel = (vetImoveis) => {
 
 
 
-let consultaImoveis = (vetImoveis, tipo) => {
+let consultaImoveis = (vetImoveis, tipo) => { //consulta se o imovel é casa ou apartamento
     for (let i=0; i<vetImoveis.length; i++){
         if (vetImoveis[i].tipo == tipo){
             console.log(vetImoveis[i])
@@ -54,7 +57,7 @@ let consultaImoveis = (vetImoveis, tipo) => {
 
 
 
-let consultaValorTotal = (vetImoveis) => {
+let consultaValorTotal = (vetImoveis) => { //preço do imovel
     let soma = 0
     for (let i=0; i<vetImoveis.length; i++){
         soma = soma + vetImoveis[i].valor        
@@ -65,7 +68,7 @@ let consultaValorTotal = (vetImoveis) => {
 
 
 
-let consultaImoveisGrandes = (vetImoveis) => {
+let consultaImoveisGrandes = (vetImoveis) => { //tamanho do imovel exemplo 100m quadrados
     for (let i=0; i<vetImoveis.length; i++){
         if (vetImoveis[i].tamanho > 100){
             console.log(vetImoveis[i])
