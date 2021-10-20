@@ -69,3 +69,10 @@ let pares = vetor6.filter((elemento) => {
     return elemento % 2 == 0
 })
 console.log(pares)
+
+
+//usando for
+const carros = ["BMW", "Volvo", "Mini"];
+for (let elemento of carros) {
+  console.log(`${elemento}`)
+}
