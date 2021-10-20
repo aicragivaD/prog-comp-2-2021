@@ -55,78 +55,37 @@ let sistemaAcademico = () => {
 //EXERCICIO 10
 
 //cria a função
-let matriz = () => {
+let exe10 = () => {
 
-    //declaração de matriz
-    //5 x 5
-
-    let mat= []
-    matriz[0] = [] //vetor 1
-    matriz[1] = [] //vetor 2
-    matriz[2] = [] //vetor 3
-    matriz[3] = [] //vetor 4
-    matriz[4] = [] //vetor 5
-
-    //entrada de dados
-
-    //somatória da 4 linha
-    for (let i=0; i<5; i++){
-        alert(`Informe um número: ${i+1}`)
-        for (let j=0; j<5; j++){
-            alert(`Informe um número: ${j+1}`)
-        }   
-    }
-    if (i = [3]){
-        soma = 0
-        soma = i + i
-    }
-    alert(`A somatória dos números da 4 linha é ${soma}`)
-
-
-    //somatória da 3 coluna
-    for (let i=0; i<5; i++){
-        for (let j=0; j<5; j++){
-            if (j = [2]){
-                soma1 = 0
-                soma1 = j + j
-            }
+    let mat = []
+    for(let i=0;i<5;i++){
+        mat[i] = []
+        for(let j=0;j<5;j++){
+            mat[i][j] = Number(prompt(`Informe um número da linha ${i+1} e coluna ${j+1}`))
         }
     }
-    alert(`A somatória dos números da 3 coluna é ${soma1}`)
-
-
-    //somatória da diagonal principal
-    for (let i=0; i<5; i++){
-        for (let j=0; j<5; j++){
-            if (i = j){
-                soma2 = 0
-                soma2 = j + i
-            }
-        }
+    // soma os elementos da diagonal principal
+    let diagonalPrincipal = 0
+    for(let i=0;i<5;i++){
+        diagonalPrincipal = diagonalPrincipal + mat[i][i]
     }
-    alert(`A somatória da diagonal principal é ${soma2}`)
-
-
-    //somatória da diagonal secundaria
-    for (let i=0; i<5; i++){
-        for (let j=0; j<5; j++){
-            if (j = i){
-                soma3 = 0
-                soma3 = j + i
-            }
-        }
+    alert(diagonalPrincipal)
+    // soma dos elementos da linha 4
+    let linha4 = 0
+    for(let j=0;j<5;j++){
+        linha4 = linha4 + mat[3][j]
     }
-    alert(`A somatória da diagonal secundária é ${soma3}`)
-
-
-    //somatória de toda a matriz
-    for (let i=0; i<5; i++){
-        for (let j=0; j<5; j++){
-            if (i = j){
-                soma4 = 0
-                soma4 = j + i
-            }
-        }
+    alert(linha4)
+    // soma dos elementos da linha 4
+    let coluna2 = 0
+    for(let i=0;i<5;i++){
+        coluna2 = coluna2 + mat[i][1]
     }
-    alert(`A somatória de toda a matriz é ${soma4}`)
+    alert(coluna2)
+    // soma os elementos da diagonal secundária
+    let diagonalSecundaria = 0
+    for(let i=0;i<5;i++){
+        diagonalSecundaria = diagonalSecundaria + mat[i][4-i]
+    }
+    alert(diagonalSecundaria)
 }
