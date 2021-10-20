@@ -2,53 +2,52 @@
 //EXERCICIO 4
 
 //cria a função
-let alunos = () => {
+let sistemaAcademico = () => {
 
     //declaração de matriz
     //15 x 5
 
     //vetor alunos
     let alunos = []
-    let provas = []
-    let opcao 
-    do{
-        opcao = prompt(`1. Cadastrar nome \n2.Cadastrar notas da prova`)
-        switch(opcao){
-            case 1:  CadastrarNome(alunos)
-                break
-            case 2: notasdaProva(provas)
-                break
-            case 3: alert(`Programa encerrado!`)
-                break
-            default: alert(`Opcão inválida!`)
+    let  provas = []
+    for (let i=0; i<3; i++){ //para cada aluno
+        //insere o nome do aluno no vetor
+        let objeto = {
+            nome: (prompt(`Informe nome do aluno ${i+1}`)),
+            media: 0
+        }
+        //insere o objeto no vetor
+        alunos.push(objeto)
+        provas [i] = [] //aloca espaço na memoria para matriz       
+        alert(`Informe 5 notas do aluno ${alunos[i]}`)
+        for (let j=0; j<5; j++){
+            //adiciona a nota na matriz
+            provas[i][j] = Number(prompt(`Nota ${j+1}`))
         }
     }
-    while (opcao != 3)
 
-
-    let CadastrarNome = (alunos) => {
-        for (let i=0; i<15; i++){ //para cada aluno
-           prompt(`Informe o nome do aluno: `)
+    //calcula média
+    let turma = 0
+    for (let i=0; i<3; i++){
+        for (let j=0; i<5; j++){
+            alunos[i].media = alunos[i].media + provas[i][j]
         }
-        alert(`Aluno ${alunos}`)
+        alunos[i].media = alunos[i].media / 5 //calculo da media
+        turma = turma + alunos[i].media
+        if (alunos[i].media > 6){
+            alert(`O aluno ${alunos[i].nome} foi APROVADO! `)
+        }
+        else if (alunos[i].media >= 3){
+            alert(`O aluno ${alunos[i].nome} está de EXAME! `)
+        }
+        else {
+            alert(`O aluno ${alunos[i].nome} foi REPROVADO! `)
+        }
     }
-
-
-    let notasdaProva = (provas) => {
-        soma = 0
-        for (let j=0; j<5; j++){ //para cada aluno
-           Number(prompt(`Informe a nota do aluno: `))
-        }
-        soma = soma + provas / 15
-        if (provas < soma){
-            alert(`Reprovado!`)
-        }
-        else{
-            alert(`Aprovado!`)
-        }
-        alert(`Nota do ${alunos} é ${provas}`)
-    }
+    turma = turma / 3
+    alert(`A média da turma é ${turma}`)
 }
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -61,7 +60,7 @@ let matriz = () => {
     //declaração de matriz
     //5 x 5
 
-    let matriz = []
+    let mat= []
     matriz[0] = [] //vetor 1
     matriz[1] = [] //vetor 2
     matriz[2] = [] //vetor 3
