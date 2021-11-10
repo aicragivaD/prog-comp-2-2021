@@ -12,6 +12,7 @@
             // cria objeto de requisição
             let req = new XMLHttpRequest()
             // faz a requisição
+            let url = `https://www.omdbapi.com/?apikey=2d8db73f=${title}`
             req.open('GET', `https://viacep.com.br/ws/${cep}/json`, true)
             // tratar a resposta da API
             req.onload = function(){
@@ -46,6 +47,9 @@
                         </li>
                         <li class="nav-item"> 
                                 <a class="nav-link" href="medico.html"> Médicos </a>
+                        </li>
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="filmes.html"> Filmes </a>
                         </li>
                         <li class="nav-item"> 
                                 <a class="nav-link" href="sobre.html"> Sobre </a>
