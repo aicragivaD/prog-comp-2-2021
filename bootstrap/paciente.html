@@ -12,7 +12,6 @@
             // cria objeto de requisição
             let req = new XMLHttpRequest()
             // faz a requisição
-            let url = `https://www.omdbapi.com/?apikey=2d8db73f=${title}`
             req.open('GET', `https://viacep.com.br/ws/${cep}/json`, true)
             // tratar a resposta da API
             req.onload = function(){
